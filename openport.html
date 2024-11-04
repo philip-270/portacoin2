@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Waitlist</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('OpenPot.png'); /* Ensure this path is correct */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            font-size: 24px;
+            padding: 15px 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="playSound()">Join Waitlist</button>
+
+    <audio id="fartSound" src="Fart sound effect.mp3"></audio> <!-- Ensure this path is correct -->
+
+    <script>
+        function playSound() {
+            const sound = document.getElementById('fartSound');
+            if (sound) {
+                try {
+                    sound.play().catch(error => {
+                        console.error('Error playing sound:', error);
+                    });
+                } catch (e) {
+                    console.error('Sound playback failed:', e);
+                }
+            } else {
+                console.error('Audio element not found.');
+            }
+        }
+    </script>
+</body>
+</html>
